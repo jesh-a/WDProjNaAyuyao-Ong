@@ -15,25 +15,48 @@ h3 {
     background-color: #577454;
 }
 .container h2 {
+    font-size: 20px;
     text-align: left;
-    padding-right: 20px;
-    color:#3c4d3a
+    padding-left: 20px;
+    color:#314230
 }
-#logo {
-    height: 70px;
-    width: 70px;
-    display: flex;
-    margin-right: auto;
-    border: 1px white solid;
+.container a {
+    float: left;
+    color: #dbefde;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Comic Sans MS';
+}
+.container a:hover {
+    background-color: #344639;
+}
+.container a.active {
+    background-color: #496150;
+    color: white;
+}
+#logo > img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    float: left;
 }
 a {
-    color:#577454;
+    color:#4b6349;
     text-decoration: none;
 }
 footer {
     background-color: #6e916a;
     display: list-item;
     color:#2f3d2e;
+    font-family: 'Comic Sans MS';
+}
+p {
+    color:#577454;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Comic Sans MS';
 }
 footer > li > a {
     color: #ffffff; 
