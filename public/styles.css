@@ -1,5 +1,18 @@
 body {
     background-color: #eff4e9;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0
+}
+header {
+    height: 15%;
+    border-color: black;
+    border-width: 1px;
+}
+main {
+    height: 70%;
+    padding: 0% 5% 0% 5%;
 }
 h1 {
     color:#6a9465;
@@ -47,6 +60,7 @@ a {
     text-decoration: none;
 }
 footer {
+    height: 15%;
     background-color: #6e916a;
     display: list-item;
     color:#2f3d2e;
