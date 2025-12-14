@@ -1,3 +1,5 @@
+
+/* body */
 body {
     background-color: #eff4e9;
     display: flex;
@@ -5,23 +7,33 @@ body {
     padding: 0;
     margin: 0
 }
+
+/* header parts */
 header {
     height: 15%;
     border-color: black;
     border-width: 1px;
 }
+
+/* inner parts */
 main {
     height: 70%;
     padding: 0% 5% 0% 5%;
 }
+
+/* all h1 */
 h1 {
     color:#6a9465;
-    text-align: center;
+    text-align: left;
 }
+
+/* all h3 */
 h3 {
     color: #6a9465;
-    text-align: center;
+    text-align: left;
 }
+
+/* navigation */
 .container {
     overflow: hidden;
     display: flex;
@@ -49,27 +61,27 @@ h3 {
     background-color: #496150;
     color: white;
 }
+
+/* logo to left */
 #logo > img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
     float: left;
 }
+
+/* links */
 a {
     color:#4b6349;
     text-decoration: none;
 }
+
+/* footer parts */
 footer {
     height: 15%;
     background-color: #6e916a;
     display: list-item;
     color:#2f3d2e;
-    font-family: 'Comic Sans MS';
-}
-p {
-    color:#577454;
-    font-size: 20px;
-    text-align: justify;
     font-family: 'Comic Sans MS';
 }
 footer > li > a {
@@ -78,3 +90,88 @@ footer > li > a {
 footer > li > a:hover {
     color:#2f3d2e;
 }
+
+/* texts */
+p {
+    color:#577454;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Comic Sans MS';
+}
+
+/* about us parts */
+.name1, .name2 {
+    color: #4e6755;
+    font-family: 'Comic Sans MS';
+}
+.name1 {
+    text-align: left;
+}
+.name2 {
+    text-align: right;
+}
+        .wrapper {
+            align-content: left;
+            display: block;
+            width: 600px;
+            border-radius: 10px;
+            padding: 30px 40px;
+        }
+        .wrapper h1 {
+            color: #5f796d;
+            font-size: 36px;
+            text-align: center;
+        }
+        .wrapper p {
+            color: #5f7964;
+            text-align: left;
+        }
+        .wrapper input {
+            width: 200px;
+            height: 50px;
+            font-size: large;
+            background-color: #d3e8d6;
+            color: #76917d;
+            border-radius: 10px;
+            padding: 20px 45px 20px 20px;
+        }
+        .wrapper .input-box {
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+            }
+
+        .input-box input {
+            width: 100%; 
+            height: 100%;
+            background: transparent;
+            outline: none;
+            border: 2px solid #5f7967;
+            border-radius: 40px;
+        }
+        .input-box input::placeholder {
+            color: #5f7962;
+            padding: 20px 45px 20px 20px;
+        }
+        .wrapper .btn {
+            width: 100%;
+            height: 45px;
+            background: #8ba893;
+            color:#435246;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            font-weight: 600;
+        }
+        .wrapper .btn:hover {
+            background: #6f8576;
+            color:#414f43;
+        }
+    /* Shop */
+    #shop {
+        float: right;
+        height: 400px;
+        width: 400px;
+    }
+        /* Garden Pop Ups */
