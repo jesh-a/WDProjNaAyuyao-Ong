@@ -202,7 +202,7 @@
     // --- config ---
     
     // seeds
-    const plantSections = {
+    const plantLibrary = {
         "strawberry": {
             name: "Strawberry",
             description: "Fruit and flower bearing plant, when grown produces a reddish, small fruit which is edible.",
@@ -240,6 +240,7 @@
     // --- func  ---
     document.addEventListener('DOMContentLoaded', () => {
         initGrid();
+        initShop();
         updateUI();
     });
 
@@ -271,7 +272,7 @@
         document.getElementById('side-panel').style.visibility = "visible";
 
         if (data.hasPlant) {
-            // for plant info
+            // info
             const info = plantLibrary[data.plantType];
             document.getElementById('panel-desc').innerText = info.description;
             
@@ -298,7 +299,7 @@
             document.getElementById('plant-actions').style.display = "none";
             document.getElementById('inventory-list').style.display = "block";
 
-            // seed buttons, if clicked itll go through planting seed function
+            // seed butn
             const invContainer = document.getElementById('inventory-buttons');
             invContainer.innerHTML = "";
             for (const [key, count] of Object.entries(inventory)) {
@@ -348,7 +349,7 @@
         gardenData[currentSelectedIndex].hasPlant = false;
         gardenData[currentSelectedIndex].plantType = null;
         gardenData[currentSelectedIndex].growthStage = 0;
-        
+
         const cell = document.getElementById(`slot-${currentSelectedIndex}`);
         cell.innerHTML = "";
         cell.className = "grid-item selected"; // Reset classes
