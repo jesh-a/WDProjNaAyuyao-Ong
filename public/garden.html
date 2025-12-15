@@ -271,7 +271,7 @@
         document.getElementById('side-panel').style.visibility = "visible";
 
         if (data.hasPlant) {
-            // info
+            // for plant info
             const info = plantLibrary[data.plantType];
             document.getElementById('panel-title').innerText = info.name + (data.isGolden ? " (GOLDEN)" : "");
             document.getElementById('panel-desc').innerText = info.description;
@@ -299,7 +299,7 @@
             document.getElementById('plant-actions').style.display = "none";
             document.getElementById('inventory-list').style.display = "block";
 
-            // seed butn
+            // seed buttons, if clicked itll go through planting seed function
             const invContainer = document.getElementById('inventory-buttons');
             invContainer.innerHTML = "";
             for (const [key, count] of Object.entries(inventory)) {
@@ -324,7 +324,6 @@
             gardenData[currentSelectedIndex].hasPlant = true;
             gardenData[currentSelectedIndex].plantType = type;
             gardenData[currentSelectedIndex].growthStage = 0;
-            gardenData[currentSelectedIndex].isGolden = false;
             
             updateGridVisual(currentSelectedIndex);
             updateUI();
@@ -350,7 +349,6 @@
         gardenData[currentSelectedIndex].hasPlant = false;
         gardenData[currentSelectedIndex].plantType = null;
         gardenData[currentSelectedIndex].growthStage = 0;
-        gardenData[currentSelectedIndex].isGolden = false;
         
         const cell = document.getElementById(`slot-${currentSelectedIndex}`);
         cell.innerHTML = "";
