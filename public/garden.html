@@ -206,8 +206,6 @@
         "strawberry": {
             name: "Strawberry",
             description: "Fruit and flower bearing plant, when grown produces a reddish, small fruit which is edible.",
-            buyPrice: 10,
-            sellPrice: 25,
             images: [
                 "../seeds/strawberry-seed.png", 
                 "../middle-stage/strawberry-seedling.png",
@@ -217,8 +215,6 @@
         "tomato": {
             name: "Tomato",
             description: "A vegetable or a fruit? A reddish, usually circular grown plant typically used as dressing in meals.",
-            buyPrice: 30,
-            sellPrice: 70,
             images: [
                 "../seeds/tomato-seed.png", 
                 "../middle-stage/tomato-seedling.png",
@@ -273,6 +269,7 @@
         if (data.hasPlant) {
             // info
             const info = plantLibrary[data.plantType];
+            document.getElementById('panel-title').innerText = info.name;
             document.getElementById('panel-desc').innerText = info.description;
             
             const badge = document.getElementById('stage-badge');
