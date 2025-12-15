@@ -7,6 +7,35 @@
         <link rel="icon" href="../assets/logo.png">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
+       <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      width: 500px;
+      height: 500px;
+      border: 2px solid black;
+      border-radius: 15px;
+      margin: 0 auto;
+      background-image: url('https://i.pinimg.com/736x/3f/06/20/3f0620a49b8579c7ca529604173f8dd5.jpg');
+    }
+
+    .cell {
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cell img {
+        width: 40px;
+        height: 40px;
+    }
+    script {
+      width: 50px;
+      height: 50px; 
+      background-color: #4b4835;
+  }
+  </style>
     <body>
        
         <header>
@@ -25,18 +54,123 @@
         </nav>
     </div>
  </header> 
-    <main> 
-        <!-- <script>
-                let params = new URLSearchParams(window.location.search);
-                const user = params.get("username");
+     <!-- login stuff -->
+            <script>
+                    let params = new URLSearchParams(window.location.search);
+                    const user = params.get("username");
 
-                if (user) {
-                    document.getElementById("welcomeMessage").textContent = `Welcome, ${user} . .ᝰ.ᐟ`;
-                }
-        </script> -->
-    <br>
-    <h3> In here will be the garden page, for more info visit our about site (can be found in the navigation on the top, and in the footer below)</h3></main>
-    </body>
+                    if (user) {
+                        document.getElementById("welcomeMessage").textContent = `Welcome, ${user} . .ᝰ.ᐟ`;
+                    }
+        </script>
+<main>
+ <div id="garden">
+    <div class="grid" id="grid-container">
+    <!-- 36 cells -->
+    <script>
+        const container = document.getElementById('grid-container');
+        const totalItems = 36;
+        const images = ["seeds/strawberry-seed.png"];
+        let htmlContent = "";
+
+        for (let i = 1; i <= totalItems; i++) {
+            const item = document.createElement('button');
+            item.classList.add('grid-item');
+            item.innerText = `Item ${i};`;
+            container.appendChild(item);
+        }
+        for (let j = 0; j < images.legnth; j++) {
+            htmlContent += `
+            <div class="grid">
+                <img src="${images[j]}" alt="Image ${j}">
+            </div>`;
+        } gridContainer.innerHTML = htmlContent;
+    </script>
+
+    <!-- <div class="cell"><img id="1a" src="../seeds/strawberry-seed.png"></div>
+    <div class="cell"><img id="1b"></div>
+    <div class="cell"><img id="1c"></div>
+    <div class="cell"><img id="1d"></div>
+    <div class="cell"><img id="1e"></div>
+    <div class="cell"><img id="1f"></div>
+
+    <div class="cell"><img id="2a"></div> 
+    <div class="cell"><img id="2b"></div>
+    <div class="cell"><img id="2c"></div>
+    <div class="cell"><img id="2d"></div>
+    <div class="cell"><img id="2e"></div>
+    <div class="cell"><img id="2f"></div>
+
+    <div class="cell"><img id="3a"></div>
+    <div class="cell"><img id="3b"></div>
+    <div class="cell"><img id="3c"></div>
+    <div class="cell"><img id="3d"></div>
+    <div class="cell"><img id="3e"></div>
+    <div class="cell"><img id="3f"></div>
+
+    <div class="cell"><img id="4a"></div>
+    <div class="cell"><img id="4b"></div>
+    <div class="cell"><img id="4c"></div>
+    <div class="cell"><img id="4d"></div>
+    <div class="cell"><img id="4e"></div>
+    <div class="cell"><img id="4f"></div>
+
+    <div class="cell"><img id="5a"></div>
+    <div class="cell"><img id="5b"></div>
+    <div class="cell"><img id="5c"></div>
+    <div class="cell"><img id="5d"></div>
+    <div class="cell"><img id="5e"></div>
+    <div class="cell"><img id="5f"></div>
+
+    <div class="cell"><img id="6a"></div>
+    <div class="cell"><img id="6b"></div>
+    <div class="cell"><img id="6c"></div>
+    <div class="cell"><img id="6d"></div>
+    <div class="cell"><img id="6e"></div>
+    <div class="cell"><img id="6f"></div> -- > -->
+    </div>
+
+        <br>
+        <script>
+            var image = "";
+            var fertilizer = 0
+            
+            function addFertilizer() {
+                fertilizer = fertilizer + 1
+            }
+
+            switch(fertilizer) {
+            case 0 :
+            image = "https://i.pinimg.com/736x/72/4e/14/724e1417b23f8c0f13c76e8a46dc3214.jpg";
+            break;
+            case 1:
+            image = "https://i.pinimg.com/736x/72/4e/14/724e1417b23f8c0f13c76e8a46dc3214.jpg";
+            break;
+            case 2:
+            image = "";
+            default:
+            image = "https://i.pinimg.com/736x/3f/06/20/3f0620a49b8579c7ca529604173f8dd5.jpg";
+
+            }
+
+            
+        </script>
+
+        <!-- Pop up -->
+        <div id="popup">
+            <div id="extra">
+            <img src="../tools/watering-can.png" />
+            <button> Water </button>
+            <img src="../tools/fertilizer-k.png" />
+            <button onclick="addFertilizer()"> Fertilize </button>
+            <img src="../tools/fertilizer-n.png" />
+            <button> Fertilize </button>
+            <img src="../tools/fertilizer-p.png" />
+            <button> Fertilize </button>
+            </div>
+        </div>
+    </div>
+      </main>
     <footer>
             &copy Ayuyao, Ong. All rights reserved.
             <br>
