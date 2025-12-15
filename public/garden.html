@@ -273,7 +273,6 @@
         if (data.hasPlant) {
             // for plant info
             const info = plantLibrary[data.plantType];
-            document.getElementById('panel-title').innerText = info.name + (data.isGolden ? " (GOLDEN)" : "");
             document.getElementById('panel-desc').innerText = info.description;
             
             const badge = document.getElementById('stage-badge');
@@ -363,7 +362,6 @@
         const lib = plantLibrary[data.plantType];
         
         cell.classList.add('planted');
-        if (data.isGolden) cell.classList.add('golden-plant');
         
         cell.innerHTML = `<img src="${lib.images[data.growthStage]}" alt="plant">`;
     }
