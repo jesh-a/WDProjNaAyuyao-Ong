@@ -1,179 +1,375 @@
 <html>
-     <html lang="en">
-    <head>
-        <title> Garden ⋆˚࿔ </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <link rel="icon" href="../assets/logo.png">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-       <style>
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(6, 1fr);
-      width: 500px;
-      height: 500px;
-      border: 2px solid black;
-      border-radius: 15px;
-      margin: 0 auto;
-      background-image: url('https://i.pinimg.com/736x/3f/06/20/3f0620a49b8579c7ca529604173f8dd5.jpg');
-    }
+    <html lang="en">
+        <head>
+            <title>Garden ⋆˚࿔</title>
+            <meta charset="UTF-8" />
+            <meta
+                name="viewport"
+                content="width=device-width, intial-scale=1.0" />
+            <link rel="icon" href="../assets/logo.png" />
+            <link rel="stylesheet" type="text/css" href="./css/garden.css" />
+        </head>
+            <header>
+                <div id="logo">
+                    <img src="../assets/logo.png" />
+                </div>
+                <div class="container">
+                    <nav aria-label="main navigation">
+                        <a href="../index.html">Menu</a>
+                        <a class="active" href="#home">Your Garden</a>
+                        <a href="./inventory.html">Inventory</a>
+                        <a href="./shop.html">Shop</a>
+                        <a href="./about-site.html">About Site</a>
+                        <a href="./about-us.html">About Us</a>
+                    </nav>
+                </div>
+            </header>
 
-    .cell {
-      border: 1px solid black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .cell img {
-        width: 40px;
-        height: 40px;
-    }
-    script {
-      width: 50px;
-      height: 50px; 
-      background-color: #4b4835;
-  }
-  </style>
-    <body>
-       
-        <header>
-    <div id="logo">
-        <img src="../assets/logo.png">
-    </div>
-    <div class="container">
-        
-        <nav aria-label="main navigation">
-                <a href="../index.html">Menu</a>
-                <a class="active" href="#home">Your Garden</a>
-                <a href="./inventory.html">Inventory</a>
-                <a href="./shop.html">Shop</a>
-                <a href="./about-site.html">About Site</a>
-                <a href="./about-us.html">About Us</a>
-        </nav>
-    </div>
- </header> 
-     <!-- login stuff -->
-            <script>
-                    let params = new URLSearchParams(window.location.search);
-                    const user = params.get("username");
-
-                    if (user) {
-                        document.getElementById("welcomeMessage").textContent = `Welcome, ${user} . .ᝰ.ᐟ`;
-                    }
-        </script>
-<main>
- <div id="garden">
-    <div class="grid" id="grid-container">
-    <!-- 36 cells -->
-    <script>
-        const container = document.getElementById('grid-container');
-        const totalItems = 36;
-        const images = ["seeds/strawberry-seed.png"];
-        let htmlContent = "";
-
-        for (let i = 1; i <= totalItems; i++) {
-            const item = document.createElement('button');
-            item.classList.add('grid-item');
-            item.innerText = `Item ${i};`;
-            container.appendChild(item);
+        <style>
+        .garden {
+            display: flex;
+            gap: 20px;
         }
-        for (let j = 0; j < images.legnth; j++) {
-            htmlContent += `
-            <div class="grid">
-                <img src="${images[j]}" alt="Image ${j}">
-            </div>`;
-        } gridContainer.innerHTML = htmlContent;
-    </script>
+        /* --- GENERAL STYLES --- */
+        body {
+            font-family: 'Comic Sans MS';
+            background-color: #eff4e9;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* --- LAYOUT --- */
+            .container {
+        overflow: hidden;
+        display: flex;
+        background-color: #577454;
+    }
+        .container h2 {
+            font-size: 20px;
+            text-align: left;
+            padding-left: 20px;
+            color:#314230
+        }
+        .container a {
+            float: left;
+            color: #dbefde;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Comic Sans MS';
+        }
+        .container a:hover {
+            background-color: #344639;
+        }
+        .container a.active {
+            background-color: #496150;
+            color: white;
+        }
+        /* logo to left */
+        #logo > img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            float: left;
+        }
+        #water {
+            width: 30px;
+            height: 30px;
+        }
 
-    <!-- <div class="cell"><img id="1a" src="../seeds/strawberry-seed.png"></div>
-    <div class="cell"><img id="1b"></div>
-    <div class="cell"><img id="1c"></div>
-    <div class="cell"><img id="1d"></div>
-    <div class="cell"><img id="1e"></div>
-    <div class="cell"><img id="1f"></div>
+        /* --- GRID --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+            background: rgb(101, 90, 74);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: auto;
+            height: auto;
+        }
 
-    <div class="cell"><img id="2a"></div> 
-    <div class="cell"><img id="2b"></div>
-    <div class="cell"><img id="2c"></div>
-    <div class="cell"><img id="2d"></div>
-    <div class="cell"><img id="2e"></div>
-    <div class="cell"><img id="2f"></div>
+        .grid-item {
+            width: 80px;
+            height: 80px;
+            background-color: #504534;
+            border: 2px solid #3c372b;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
 
-    <div class="cell"><img id="3a"></div>
-    <div class="cell"><img id="3b"></div>
-    <div class="cell"><img id="3c"></div>
-    <div class="cell"><img id="3d"></div>
-    <div class="cell"><img id="3e"></div>
-    <div class="cell"><img id="3f"></div>
+        .grid-item:hover { transform: translateY(-2px); }
+        .grid-item img { width: 70%; height: 70%; object-fit: contain; pointer-events: none; }
+        .grid-item.selected { border: 3px solid #55e178; background-color: #716758; }
+        .grid-item.planted { background-color: #8d6e63; border-color: #6d4c41; }
 
-    <div class="cell"><img id="4a"></div>
-    <div class="cell"><img id="4b"></div>
-    <div class="cell"><img id="4c"></div>
-    <div class="cell"><img id="4d"></div>
-    <div class="cell"><img id="4e"></div>
-    <div class="cell"><img id="4f"></div>
+        /* --- SIDE PANEL --- */
+        #side-panel {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            visibility: hidden;
+            height: fit-content;
+        }
 
-    <div class="cell"><img id="5a"></div>
-    <div class="cell"><img id="5b"></div>
-    <div class="cell"><img id="5c"></div>
-    <div class="cell"><img id="5d"></div>
-    <div class="cell"><img id="5e"></div>
-    <div class="cell"><img id="5f"></div>
+        .seed-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .seed-btn:hover { background-color: #f1f8e9; }
+        .seed-btn:disabled { opacity: 0.5; cursor: not-allowed; background: #eee; }
 
-    <div class="cell"><img id="6a"></div>
-    <div class="cell"><img id="6b"></div>
-    <div class="cell"><img id="6c"></div>
-    <div class="cell"><img id="6d"></div>
-    <div class="cell"><img id="6e"></div>
-    <div class="cell"><img id="6f"></div> -- > -->
-    </div>
+        /* Action Buttons */
+        
+        .action-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            color: rgb(75, 98, 77);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .action-btn:hover { background-color: #809880; }
+        .action-btn:disabled { background-color: #647768 !important; cursor: not-allowed; }
 
-        <br>
-        <script>
-            var image = "";
-            var fertilizer = 0
+    </style>
+</head>
+<body>
+<main>
+    <div class="garden">
+        <div class="grid" id="grid-container"></div>
+
+        <div id="side-panel">
+            <h2 id="panel-title" style="margin-top:0;">Plot </h2>
+            <p id="panel-desc" style="color:#666; font-style:italic; font-size:0.9em;">...</p>
             
-            function addFertilizer() {
-                fertilizer = fertilizer + 1
-            }
+            <div id="stage-badge" style="background:#2ecc71; color:white; padding:5px 10px; border-radius:15px; display:none; font-size:0.8em; margin-bottom:15px; width:fit-content;"></div>
 
-            switch(fertilizer) {
-            case 0 :
-            image = "https://i.pinimg.com/736x/72/4e/14/724e1417b23f8c0f13c76e8a46dc3214.jpg";
-            break;
-            case 1:
-            image = "https://i.pinimg.com/736x/72/4e/14/724e1417b23f8c0f13c76e8a46dc3214.jpg";
-            break;
-            case 2:
-            image = "";
-            default:
-            image = "https://i.pinimg.com/736x/3f/06/20/3f0620a49b8579c7ca529604173f8dd5.jpg";
+            <div id="inventory-list" style="display: none;">
+                <p><strong>Your Seeds:</strong></p>
+                <div id="inventory-buttons"></div>
+            </div>
 
-            }
+            <div id="plant-actions" style="display: none;">
+                
+                <button class="action-btn" onclick="growPlant()">
+                   <img id="water" src="../tools/watering-can.png" /> <span> Water </span>
+                </button>
+                
+                <hr style="margin: 10px 0; border: 0; border-top: 1px solid #8bac8a;">
 
-            
-        </script>
-
-        <!-- Pop up -->
-        <div id="popup">
-            <div id="extra">
-            <img src="../tools/watering-can.png" />
-            <button> Water </button>
-            <img src="../tools/fertilizer-k.png" />
-            <button onclick="addFertilizer()"> Fertilize </button>
-            <img src="../tools/fertilizer-n.png" />
-            <button> Fertilize </button>
-            <img src="../tools/fertilizer-p.png" />
-            <button> Fertilize </button>
+                <button class="action-btn" style="background-color: #ffffff;" onclick="removePlant()">🗑️ Dig Up</button>
             </div>
         </div>
     </div>
-      </main>
-    <footer>
-            &copy Ayuyao, Ong. All rights reserved.
-            <br>
-            <li><a href="public/about-us.html">About Us</a></li>
-            <li><a href="public/about-site.html">About Site</a></li>
-    </footer>
+
+<script>
+    // --- config ---
+    
+    // seeds
+    const plantLibrary = {
+        "strawberry": {
+            name: "Strawberry",
+            description: "Fruit and flower bearing plant, when grown produces a reddish, small fruit which is edible.",
+            buyPrice: 10,
+            sellPrice: 25,
+            images: [
+                "../seeds/strawberry-seed.png", 
+                "../middle-stage/strawberry-seedling.png",
+                "../plants/strawberry-plant.png"
+            ]
+        },
+        "tomato": {
+            name: "Tomato",
+            description: "A vegetable or a fruit? A reddish, usually circular grown plant typically used as dressing in meals.",
+            buyPrice: 30,
+            sellPrice: 70,
+            images: [
+                "../seeds/tomato-seed.png", 
+                "../middle-stage/tomato-seedling.png",
+                "../plants/tomato-plant.png"
+            ]
+        },
+    };
+
+
+    // --- game ---
+    let inventory = {
+        "strawberry": 3,
+        "tomato": 3,
+    };
+    
+    let gardenData = []; 
+    let currentSelectedIndex = null;
+
+    // --- func  ---
+    document.addEventListener('DOMContentLoaded', () => {
+        initGrid();
+        initShop();
+        updateUI();
+    });
+
+    function initGrid() {
+        const container = document.getElementById('grid-container');
+        for (let i = 0; i < 36; i++) {
+            gardenData.push({ 
+                id: i, 
+                hasPlant: false, 
+                plantType: null, 
+                growthStage: 0,
+            });
+            
+            const cell = document.createElement('div');
+            cell.classList.add('grid-item');
+            cell.id = `slot-${i}`;
+            cell.onclick = () => selectPlot(i);
+            container.appendChild(cell);
+        }
+    }
+
+    // --- GARDEN ---
+    window.selectPlot = function(index) {
+        currentSelectedIndex = index;
+        const data = gardenData[index];
+        
+        document.querySelectorAll('.grid-item').forEach(el => el.classList.remove('selected'));
+        document.getElementById(`slot-${index}`).classList.add('selected');
+        document.getElementById('side-panel').style.visibility = "visible";
+
+        if (data.hasPlant) {
+            // info
+            const info = plantLibrary[data.plantType];
+            document.getElementById('panel-title').innerText = info.name + (data.isGolden ? " (GOLDEN)" : "");
+            document.getElementById('panel-desc').innerText = info.description;
+            
+            const badge = document.getElementById('stage-badge');
+            badge.style.display = "block";
+            
+            if (data.growthStage === 2) {
+                badge.innerText = "Grown!";
+                badge.style.background = "#e67e22";
+            } else {
+                badge.innerText = "Growing...";
+                badge.style.background = "#2ecc71";
+            }
+
+            document.getElementById('plant-actions').style.display = "block";
+            document.getElementById('inventory-list').style.display = "none";
+
+
+        } else {
+            // inv
+            document.getElementById('panel-title').innerText = "Empty Plot";
+            document.getElementById('panel-desc').innerText = "Select a seed.";
+            document.getElementById('stage-badge').style.display = "none";
+            document.getElementById('plant-actions').style.display = "none";
+            document.getElementById('inventory-list').style.display = "block";
+
+            // seed butn
+            const invContainer = document.getElementById('inventory-buttons');
+            invContainer.innerHTML = "";
+            for (const [key, count] of Object.entries(inventory)) {
+                if (!plantLibrary[key]) continue; // Skip fertilizers here
+                
+                const btn = document.createElement('button');
+                btn.classList.add('seed-btn');
+                btn.innerHTML = `<span>${plantLibrary[key].name}</span> <span>x${count}</span>`;
+                
+                if (count > 0) btn.onclick = () => plantSeed(key);
+                else btn.disabled = true;
+                
+                invContainer.appendChild(btn);
+            }
+        }
+    };
+
+
+    window.plantSeed = function(type) {
+        if (inventory[type] > 0) {
+            inventory[type]--;
+            gardenData[currentSelectedIndex].hasPlant = true;
+            gardenData[currentSelectedIndex].plantType = type;
+            gardenData[currentSelectedIndex].growthStage = 0;
+            gardenData[currentSelectedIndex].isGolden = false;
+            
+            updateGridVisual(currentSelectedIndex);
+            updateUI();
+            selectPlot(currentSelectedIndex);
+        }
+    };
+
+    // --- actions ---
+    
+    // water
+    window.growPlant = function() {
+        const data = gardenData[currentSelectedIndex];
+        if (data.growthStage < 2) {
+            data.growthStage++;
+            updateGridVisual(currentSelectedIndex);
+            selectPlot(currentSelectedIndex);
+        } else {
+            alert("Fully grown!");
+        }
+    };
+
+    window.removePlant = function() {
+        gardenData[currentSelectedIndex].hasPlant = false;
+        gardenData[currentSelectedIndex].plantType = null;
+        gardenData[currentSelectedIndex].growthStage = 0;
+        gardenData[currentSelectedIndex].isGolden = false;
+        
+        const cell = document.getElementById(`slot-${currentSelectedIndex}`);
+        cell.innerHTML = "";
+        cell.className = "grid-item selected"; // Reset classes
+        
+        selectPlot(currentSelectedIndex);
+    };
+
+    function updateGridVisual(index) {
+        const data = gardenData[index];
+        const cell = document.getElementById(`slot-${index}`);
+        const lib = plantLibrary[data.plantType];
+        
+        cell.classList.add('planted');
+        if (data.isGolden) cell.classList.add('golden-plant');
+        
+        cell.innerHTML = `<img src="${lib.images[data.growthStage]}" alt="plant">`;
+    }
+</script>
+    </div>
+        </main>
+            </body>
+        <footer>
+                &copy Ayuyao, Ong. All rights reserved.
+                <br />
+                <li><a href="public/about-us.html">About Us</a></li>
+                <li><a href="public/about-site.html">About Site</a></li>
+            </footer>
+        </body>
+    </html>
+</html>
+</html>

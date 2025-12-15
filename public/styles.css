@@ -10,30 +10,22 @@
 
 /* header parts */
     header {
-        height: 15%;
         border-color: black;
         border-width: 1px;
-    }
-
-
-/* inner parts */
-    main {
-        height: 70%;
-        padding: 0% 5% 0% 5%;
     }
 
 
 /* all h1 */
     h1 {
         color:#6a9465;
-        text-align: left;
+        text-align: center;
     }
 
 
 /* all h3 */
     h3 {
         color: #6a9465;
-        text-align: left;
+        text-align: center;
     }
 
 
@@ -104,20 +96,9 @@
         color:#577454;
         font-size: 17px;
         text-align: justify;
+        justify-content: center;
         font-family: 'Comic Sans MS';
-    }
-
-
-/* about us parts */
-    .name1, .name2 {
-        color: #4e6755;
-        font-family: 'Comic Sans MS';
-    }
-    .name1 {
-        text-align: left;
-    }
-    .name2 {
-        text-align: right;
+        padding: 10px;
     }
 
 
@@ -197,33 +178,4 @@
         float: right;
         height: 400px;
         width: 400px;
-    }
-
-
-/* Garden Pop Ups */
-    #popup {
-        width: 50%;
-        background-color: #605647;
-        color:#615c4a;
-        display: flex;
-        border: 5px solid #3d3a2e;
-        border-radius: 15px;
-        width: 500px;
-        padding: 10px;
-        float: right;
-    }
-    #popup button {
-        background-color: #635f4d;
-        color: #bab293;
-        font-family: 'Comic Sans MS';
-        border-radius: 5px;
-        border-color: #3d3a2e;
-    }
-    #extra img {
-        width: 50px;
-        height: 50px;
-    }
-    #garden {
-        display: flex;
-        align-content: center;
     }

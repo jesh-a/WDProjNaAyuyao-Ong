@@ -1,0 +1,122 @@
+<html>
+    <html lang="en">
+        <head>
+            <title>Garden ⋆˚࿔</title>
+            <meta charset="UTF-8" />
+            <meta
+                name="viewport"
+                content="width=device-width, intial-scale=1.0"
+            />
+            <link rel="icon" href="../assets/logo.png" />
+            <link rel="stylesheet" type="text/css" href="styles.css" />
+            <link rel="stylesheet" type="text/css" href="./css/garden.css" />
+        </head>
+
+        <body>
+            <header>
+                <div id="logo">
+                    <img src="../assets/logo.png" />
+                </div>
+                <div class="container">
+                    <nav aria-label="main navigation">
+                        <a href="../index.html">Menu</a>
+                        <a class="active" href="#home">Your Garden</a>
+                        <a href="./inventory.html">Inventory</a>
+                        <a href="./shop.html">Shop</a>
+                        <a href="./about-site.html">About Site</a>
+                        <a href="./about-us.html">About Us</a>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- login stuff -->
+            <script>
+                let params = new URLSearchParams(window.location.search);
+                const user = params.get("username");
+
+                if (user) {
+                    document.getElementById(
+                        "welcomeMessage"
+                    ).textContent = `Welcome, ${user} . .ᝰ.ᐟ`;
+                }
+            </script>
+            
+            <main>
+                <div id="garden">
+                    <div class="grid" id="grid-container">
+                        <!-- 36 cells -->
+                        <script>
+                            const container =
+                                document.getElementById("grid-container");
+                            const totalItems = 36;
+                            const images = {
+                                strawberry: "seeds/strawberry-seed.png",
+                            };
+                            let htmlContent = "";
+
+                            for (let i = 1; i <= totalItems; i++) {
+                                const item = document.createElement("button");
+                                item.classList.add("grid-item");
+                                item.innerText = `Item ${i};`;
+                                container.appendChild(item);
+                            }
+                            for (let j = 0; j < images.legnth; j++) {
+                                htmlContent += `
+                                    <div class="grid">
+                                        <img src="${images[j]}" alt="Image ${j}">
+                                    </div>`;
+                            }
+                            gridContainer.innerHTML = htmlContent;
+                        </script>
+                    </div>
+
+                    <br />
+                    <script>
+                        var image = "";
+                        var fertilizer = 0;
+
+                        function addFertilizer() {
+                            fertilizer = fertilizer + 1;
+                        }
+
+                        switch (fertilizer) {
+                            case 0:
+                                image =
+                                    "https://i.pinimg.com/736x/72/4e/14/724e1417b23f8c0f13c76e8a46dc3214.jpg";
+                                break;
+                            case 1:
+                                image =
+                                    "https://i.pinimg.com/736x/72/4e/14/724e1417b23f8c0f13c76e8a46dc3214.jpg";
+                                break;
+                            case 2:
+                                image = "";
+                            default:
+                                image =
+                                    "https://i.pinimg.com/736x/3f/06/20/3f0620a49b8579c7ca529604173f8dd5.jpg";
+                        }
+                    </script>
+
+                    <!-- Pop up -->
+                    <div id="popup">
+                        <div id="extra">
+                            <img src="../tools/watering-can.png" />
+                            <button>Water</button>
+                            <img src="../tools/fertilizer-k.png" />
+                            <button onclick="addFertilizer()">Fertilize</button>
+                            <img src="../tools/fertilizer-n.png" />
+                            <button>Fertilize</button>
+                            <img src="../tools/fertilizer-p.png" />
+                            <button>Fertilize</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                &copy Ayuyao, Ong. All rights reserved.
+                <br />
+                <li><a href="public/about-us.html">About Us</a></li>
+                <li><a href="public/about-site.html">About Site</a></li>
+            </footer>
+        </body>
+    </html>
+</html>
