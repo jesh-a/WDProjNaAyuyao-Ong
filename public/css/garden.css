@@ -43,24 +43,24 @@ script button {
 }
 
 /* header parts */
-    header {
-        width: 100%;
-        border-color: black;
-        border-width: 1px;
-    }
+header {
+    width: 100%;
+    border-color: black;
+    border-width: 1px;
+}
 
 /* footer parts */
-    footer {
-        height: 15%;
-        background-color: #6e916a;
-        display: list-item;
-        color:#2f3d2e;
-        font-family: 'Comic Sans MS';
-        width: 100%;
-    }
-    footer > li > a {
-        color: #ffffff; 
-    }
-    footer > li > a:hover {
-        color:#2f3d2e;
-    }
+footer {
+    height: 15%;
+    background-color: #6e916a;
+    display: list-item;
+    color: #2f3d2e;
+    font-family: "Comic Sans MS";
+    width: 100%;
+}
+footer > li > a {
+    color: #ffffff;
+}
+footer > li > a:hover {
+    color: #2f3d2e;
+}
