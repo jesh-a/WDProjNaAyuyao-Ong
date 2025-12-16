@@ -1,4 +1,4 @@
-        // seeds
+        // plants in an object
     const plantLibrary = {
         "strawberry": {
             name: "Strawberry",
@@ -21,7 +21,7 @@
     };
 
 
-    // --- game ---
+    // --- game system ---
     let inventory = {
         "strawberry": 3,
         "tomato": 3,
@@ -36,6 +36,7 @@
         updateUI();
     });
 
+    // loops for 36 cells, checks each cell for elements
     function initGrid() {
         const container = document.getElementById('grid-container');
         for (let i = 0; i < 36; i++) {
@@ -64,7 +65,7 @@
         document.getElementById('side-panel').style.visibility = "visible";
 
         if (data.hasPlant) {
-            // info
+            // prints info
             const info = plantLibrary[data.plantType];
             document.getElementById('panel-title').innerText = info.name;
             document.getElementById('panel-desc').innerText = info.description;
@@ -72,6 +73,7 @@
             const badge = document.getElementById('stage-badge');
             badge.style.display = "block";
             
+            // shows growth stages, from seed to plant
             if (data.growthStage === 2) {
                 badge.innerText = "Grown!";
                 badge.style.background = "#e67e22";
@@ -85,14 +87,14 @@
 
 
         } else {
-            // inv
+            // shows inventory / panel for no seeds or plants in cell
             document.getElementById('panel-title').innerText = "Empty Plot";
             document.getElementById('panel-desc').innerText = "Select a seed.";
             document.getElementById('stage-badge').style.display = "none";
             document.getElementById('plant-actions').style.display = "none";
             document.getElementById('inventory-list').style.display = "block";
 
-            // seed butn
+            // plant seed butn
             const invContainer = document.getElementById('inventory-buttons');
             invContainer.innerHTML = "";
             for (const [key, count] of Object.entries(inventory)) {
@@ -126,7 +128,7 @@
 
     // --- actions ---
     
-    // water
+    // water plant
     window.growPlant = function() {
         const data = gardenData[currentSelectedIndex];
         if (data.growthStage < 2) {
@@ -138,6 +140,7 @@
         }
     };
 
+    // dig up plant functions
     window.removePlant = function() {
         gardenData[currentSelectedIndex].hasPlant = false;
         gardenData[currentSelectedIndex].plantType = null;
@@ -150,6 +153,7 @@
         selectPlot(currentSelectedIndex);
     };
 
+    // puts in a plant
     function updateGridVisual(index) {
         const data = gardenData[index];
         const cell = document.getElementById(`slot-${index}`);
