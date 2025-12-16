@@ -18,6 +18,24 @@
                 "../plants/tomato-plant.png"
             ]
         },
+        "sunflower": {
+            name: "Sunflower",
+            description: "A bright, slightly tall golden-yellow-rayed flower from the daisy family, typically symbolizing happiness.",
+            images: [
+                "../seeds/sunflower-seed.png", 
+                "../middle-stage/sunflower-sprout.png",
+                "../plants/sunflower.png"
+            ]
+        },
+        "caladium": {
+            name: "Caladium",
+            description: "A green mixed with a hint of pink, overcoming the usual normalcy of leafy, green plants.",
+            images: [
+                "../seeds/caladium-seed.png", 
+                "../middle-stage/caladium-seedling.png",
+                "../plants/caladium-plant.png"
+            ]
+        },
     };
 
 
@@ -25,6 +43,8 @@
     let inventory = {
         "strawberry": 3,
         "tomato": 3,
+        "sunflower": 2,
+        "caladium": 2
     };
     
     let gardenData = []; 
@@ -73,7 +93,7 @@
             const badge = document.getElementById('stage-badge');
             badge.style.display = "block";
             
-            // shows growth stages, from seed to plant
+            // shows growth stages, from seed to plant when user waters plant
             if (data.growthStage === 2) {
                 badge.innerText = "Grown!";
                 badge.style.background = "#e67e22";
