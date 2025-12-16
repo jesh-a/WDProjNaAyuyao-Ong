@@ -1,6 +1,4 @@
-// --- config ---
-    
-    // seeds
+        // seeds
     const plantLibrary = {
         "strawberry": {
             name: "Strawberry",
