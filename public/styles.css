@@ -12,6 +12,7 @@
     header {
         border-color: black;
         border-width: 1px;
+        padding-bottom: 10px;
     }
 
 
@@ -82,6 +83,7 @@
         display: list-item;
         color:#2f3d2e;
         font-family: 'Comic Sans MS';
+        padding-top: 10px;
     }
     footer > li > a {
         color: #ffffff; 

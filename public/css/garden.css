@@ -47,6 +47,7 @@ header {
     width: 100%;
     border-color: black;
     border-width: 1px;
+    padding-bottom: 10px;
 }
 
 /* footer parts */
@@ -57,6 +58,7 @@ footer {
     color: #2f3d2e;
     font-family: "Comic Sans MS";
     width: 100%;
+    padding-top: 10px;
 }
 footer > li > a {
     color: #ffffff;
