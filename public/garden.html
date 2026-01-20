@@ -4,8 +4,7 @@
             <title>Garden ⋆˚࿔</title>
             <meta charset="UTF-8" />
             <meta
-                name="viewport"
-                content="width=device-width, intial-scale=1.0" />
+                name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="icon" href="../assets/logo.png" />
             <link rel="stylesheet" type="text/css" href="./css/garden.css" />
         </head>
@@ -17,7 +16,7 @@
                     <nav aria-label="main navigation">
                         <a href="../index.html">Menu</a>
                         <a class="active" href="#home">Your Garden</a>
-                        <a href="./shop.html">Shop</a>
+                        <!-- <a href="./shop.html">Shop</a> -->
                         <a href="./about-site.html">About Site</a>
                         <a href="./about-us.html">About Us</a>
                     </nav>
@@ -125,6 +124,7 @@ footer{background-color:#6e916a;color:#2f3d2e;font-family:"Comic Sans MS";width:
     #side-panel{max-width:100%;}
 }
 
+<<<<<<< HEAD
 /* Laptop breakpoint: use a 6-column grid with fixed tile size to preserve original appearance */
 @media (min-width:1024px){
     .garden{flex-direction:row;align-items:flex-start;justify-content:center}
@@ -132,12 +132,27 @@ footer{background-color:#6e916a;color:#2f3d2e;font-family:"Comic Sans MS";width:
     .grid{grid-template-columns: repeat(6, var(--tile-size)); max-width: calc(var(--tile-size) * 6 + var(--tile-gap) * 5 + 2rem); box-sizing: border-box}
     #side-panel{width:var(--panel-width)}
 }
+=======
+        /* --- grid --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+            background: rgb(101, 90, 74);
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: auto;
+            width: auto;
+            height: auto;
+           
+        }
+>>>>>>> 629ebd5c0b90855bd47916e69f0c6da7c5463730
 
 /* Accessibility / touch target hint */
 .grid-item, .seed-btn, .action-btn{min-height:44px}
 
     </style>
-</head>
 <body>
 <main>
       <!-- login stuff -->
