@@ -1,0 +1,114 @@
+/* main css */
+
+/* header parts */
+    header {
+        border-color: black;
+        border-width: 1px;
+        height: 40%;
+    }
+
+
+/* all h1 */
+    h1 {
+        color:#6a9465;
+        text-align: center;
+    }
+
+/* navigation */
+    .container {
+        overflow: hidden;
+        display: flex;
+        background-color: #577454;
+    }
+    .container h2 {
+        font-size: 20px;
+        text-align: left;
+        padding-left: 20px;
+        color:#314230
+    }
+    .container a {
+        float: left;
+        color: #dbefde;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'Comic Sans MS';
+    }
+    .container a:hover {
+        background-color: #344639;
+    }
+    .container a.active {
+        background-color: #496150;
+        color: white;
+    }
+
+
+/* logo to left */
+    #logo > img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        float: left;
+    }
+
+
+/* links */
+    a {
+        color:#4b6349;
+        text-decoration: none;
+    }
+
+
+/* footer parts */
+    footer {
+        height: 15%;
+        background-color: #6e916a;
+        display: list-item;
+        color:#2f3d2e;
+        font-family: 'Comic Sans MS';
+        padding-top: 10px;
+    }
+    footer > li > a {
+        color: #ffffff; 
+    }
+    footer > li > a:hover {
+        color:#2f3d2e;
+    }
+
+/* Game */
+body {
+  font-family: system-ui, sans-serif;
+  background: #e8f5e9;
+  text-align: center;
+  margin: auto;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 4px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background: #a5d6a7; /* grass */
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.cell.revealed {
+  background: #f1f8e9; /* soil */
+  cursor: default;
+}
+
+.cell.bad {
+  background: #ef9a9a;
+}

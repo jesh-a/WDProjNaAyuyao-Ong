@@ -204,6 +204,9 @@ footer > li > a:hover {
     color: #2f3d2e;
 }
 
+a {
+    text-decoration: none;
+}
 /* Hybrid behavior: when viewport is very narrow, preserve tile size and allow horizontal pan */
 @media (max-width: 360px) {
     /* only enable panning on very narrow screens where tiles shrink to unusable sizes */
