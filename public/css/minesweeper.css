@@ -62,7 +62,7 @@
 
 /* footer parts */
     footer {
-        height: 15%;
+        height: 20%;
         background-color: #6e916a;
         display: list-item;
         color:#2f3d2e;
@@ -112,3 +112,19 @@ body {
 .cell.bad {
   background: #ef9a9a;
 }
+
+button {
+        width: 40%;
+        height: 45px;
+        background: #6fb674;
+        color:#3a6a43;
+        font-size: 15px;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        font-weight: 600;
+    }
+    button:hover {
+        background: #628d70;
+        color:#39563e;
+    }
