@@ -13,6 +13,7 @@
         border-color: black;
         border-width: 1px;
         padding-bottom: 10px;
+        height: 20%;
     }
 
 
@@ -172,12 +173,4 @@
     #menu {
         display: flex;
         align-content: center;
-    }
-
-
-/* Shop */
-    #shop {
-        float: right;
-        height: 400px;
-        width: 400px;
     }

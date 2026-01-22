@@ -1,6 +1,6 @@
 :root {
     /* smaller tiles to avoid overflow; still fluid */
-    --tile-size: clamp(80px, 16vw, 140px);
+    --tile-size: clamp(80px, 16vw, 80px);
     --tile-gap: 6px;
     --panel-width: 300px;
     --bg: #eff4e9;
@@ -247,5 +247,5 @@ footer > li > a:hover {
 .grid-item,
 .seed-btn,
 .action-btn {
-    min-height: 44px;
+    min-height: 30px;
 }
