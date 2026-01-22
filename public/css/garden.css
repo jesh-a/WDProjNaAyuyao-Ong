@@ -45,13 +45,14 @@ main {
 header {
     width: 100%;
     height: 30%;
+    display: flex;
 }
 .container {
     overflow: hidden;
     display: flex;
     background-color: #577454;
     width: 100%;
-    height: 30px;
+    height: 40px;
     align-items: center;
 }
 .container a {
@@ -69,10 +70,11 @@ header {
     color: white;
 }
 #logo > img {
-    width: 50px;
-    height: 50px;
-    margin: 6px;
-}
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        float: left;
+    }
 
 /* Grid: mobile-first, fluid tiles that keep aspect ratio */
 .grid {
@@ -128,7 +130,7 @@ header {
 }
 .grid-item.planted {
     background-color: #8d6e63;
-    border-color: #6d4c41;
+    border-color: #416d4b;
 }
 
 /* Side panel */
@@ -187,7 +189,7 @@ header {
 
 /* Footer */
 footer {
-    height: 15%;
+    height: 20%;
     width: 100%;
     background-color: #6e916a;
     display: list-item;
@@ -248,4 +250,10 @@ footer > li > a:hover {
 .seed-btn,
 .action-btn {
     min-height: 30px;
+}
+
+/* Misc. */
+#water {
+    width: 30px;
+    height: 30px;
 }
