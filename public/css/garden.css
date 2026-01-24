@@ -65,6 +65,7 @@ header {
     padding: 10px 12px;
     text-decoration: none;
     font-size: 15px;
+    font-family: 'Comic Sans MS', 'system-ui', sans-serif;
 }
 .container a:hover {
     background-color: #344639;
