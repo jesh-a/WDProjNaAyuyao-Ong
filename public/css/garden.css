@@ -264,3 +264,20 @@ a {
     width: 30px;
     height: 30px;
 }
+
+/* Wiggle animation for seed/plant images */
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+.grid-item img {
+    animation: wiggle 1.5s ease-in-out infinite;
+}
