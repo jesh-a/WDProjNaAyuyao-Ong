@@ -14,13 +14,17 @@
 body {
     margin: 0;
     font-family: "Comic Sans MS", system-ui, sans-serif;
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 60%;
     min-height: 100vh;
     color: #2f3d2e;
+    background-image: url('../../assets/bgg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 main {
