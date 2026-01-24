@@ -62,12 +62,13 @@
 
 /* footer parts */
     footer {
-        height: 20%;
+        height: 30%;
         background-color: #6e916a;
         display: list-item;
         color:#2f3d2e;
         font-family: 'Comic Sans MS';
         padding-top: 10px;
+        justify-content: left;
     }
     footer > li > a {
         color: #ffffff; 
@@ -89,7 +90,7 @@ body {
   grid-template-columns: repeat(10, 40px);
   gap: 4px;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .cell {
@@ -114,7 +115,8 @@ body {
 }
 
 button {
-        width: 40%;
+        width: 20%;
+        margin: 10px;
         height: 45px;
         background: #6fb674;
         color:#3a6a43;
@@ -128,3 +130,21 @@ button {
         background: #628d70;
         color:#39563e;
     }
+
+#info {
+    max-width: 400px;
+    padding: 12px;
+    border: 2px solid #577454;
+    border-radius: 8px;
+    background-color: #e4e9dd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color:#688764;
+    font-family: 'Comic Sans MS';
+}
+
+p:hover {
+    color:#4b6349;
+}
