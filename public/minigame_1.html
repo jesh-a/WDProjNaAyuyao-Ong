@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Garden Sweeper .☘︎ ݁˖</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="../assets/logo.png" />
+        <link rel="stylesheet" href="css/minesweeper.css" />
+    </head>
+
+    <header>
+        <div id="logo">
+            <img src="../assets/logo.png" />
+        </div>
+        <div class="container">
+            <nav aria-label="main navigation">
+                <a href="./logout.html">Menu</a>
+                <a href="./garden.html">Your Garden</a>
+                <!-- <a href="./shop.html">Shop</a> -->
+                <a href="./about-site.html">About Site</a>
+                <a href="./about-us.html">About Us</a>
+                <a href="./minigames.html">Back?</a>
+            </nav>
+        </div>
+    </header>
+    <body>
+        <h1>★ Garden Sweeper</h1>
+        <button id="reset">New Garden</button>
+        <button popovertarget="info">How to play?</button>
+        <button title="Time your trial? c:" id="startButton">Start Timer</button>
+        <div id="stopwatch" style="display: none; color:#4b6349">0</div>
+
+    </div>
+        <div id="info" popover>
+            <h1>Garden Sweeper ★</h1>
+            <ul>
+                <li><p>Click on a tile to reveal it, whether it's a number tile or a poisonous plant.</p></li>
+                <li><p>The number tile shows how much poisonous plants are around it.</p></li>
+                <li><p>i.e. if it has 1, there is one mine around it based on a 3x3 grid.</p></li>
+                <li><p>Simply put, avoid the poisonous plants using your analyzation and skill! Let your garden flourish.</p></li>
+            </ul>
+        </div>
+
+        <div id="board"></div>
+
+        <script src="./js/minesweeper.js"></script>
+        <!-- footer -->
+        <footer>
+            &copy Ayuyao, Ong. All rights reserved.
+            <br />
+            <li><a href="public/about-us.html">About Us</a></li>
+            <li><a href="public/about-site.html">About Site</a></li>
+        </footer>
+    </body>
+</html>

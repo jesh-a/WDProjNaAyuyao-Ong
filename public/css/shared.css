@@ -1,0 +1,168 @@
+/* Shared styles for headers, footers, and common elements */
+
+/* Root variables */
+:root {
+    --nav-bg: #577454;
+    --text-color: #2f3d2e;
+    --footer-bg: #6e916a;
+    --accent-color: #55e178;
+    --primary-green: #6a9465;
+}
+
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", system-ui, sans-serif;
+    background-color: #eff4e9;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+header {
+    width: 100%;
+    display: flex;
+    border-color: black;
+    border-width: 1px;
+    height: 5vh;
+}
+
+.container {
+    overflow: visible;
+    display: flex;
+    background-color: var(--nav-bg);
+    width: 100%;
+    height: auto;
+    min-height: 40px;
+    align-items: center;
+}
+
+.container h2 {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+    color: #314230;
+}
+
+.container a {
+    color: #dbefde;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Comic Sans MS';
+}
+
+.container a:hover {
+    background-color: #344639;
+}
+
+.container a.active {
+    background-color: #496150;
+    color: white;
+}
+
+/* Logo */
+#logo > img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    float: left;
+}
+
+/* Links */
+a {
+    color: #4b6349;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: var(--footer-bg);
+    display: block;
+    color: var(--text-color);
+    font-family: 'Comic Sans MS';
+    padding: 12px;
+    margin-top: auto;
+}
+
+footer > li > a {
+    color: #ffffff;
+}
+
+footer > li > a:hover {
+    color: var(--text-color);
+}
+
+/* Headings */
+h1 {
+    color: var(--primary-green);
+    text-align: center;
+}
+
+h3 {
+    color: var(--primary-green);
+    text-align: center;
+}
+
+/* Paragraphs */
+p {
+    color: #577454;
+    font-size: 17px;
+    text-align: justify;
+    justify-content: center;
+    font-family: 'Comic Sans MS';
+    padding: 10px;
+}
+
+/* Accessibility / touch target hint */
+.container a {
+    min-height: 30px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+        height: auto;
+        overflow: visible;
+    }
+
+    .container a {
+        padding: 8px 10px;
+        font-size: 13px;
+        flex: 1;
+        min-width: 60px;
+    }
+
+    #logo > img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container a {
+        padding: 6px 8px;
+        font-size: 12px;
+        flex: 1;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    #logo > img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+}
