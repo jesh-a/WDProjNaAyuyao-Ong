@@ -14,7 +14,7 @@ main {
     width: 50%;
     min-width: 320px;
     max-width: 480px;
-    height: 100%;
+    height: 900px;
     padding: 32px 0 32px 32px;
     box-sizing: border-box;
     display: flex;
@@ -234,4 +234,18 @@ main {
     text-align: center;
     min-width: 220px;
     color: #6c8a5e;
+}
+
+#shop-coin-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4e6a3e;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: #8aad75 2px solid;
 }
