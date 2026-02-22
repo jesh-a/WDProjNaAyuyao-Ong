@@ -29,19 +29,35 @@
                 </div>
             </header>
             <main>
-                <h3>
-                    This is the page where you call sell your fully grown plants for coins in order
-                    to buy more seeds for more plants. They sell for usual prices (found in our About Site page).
-                    With this, the player can enjoy the variety of nature, all in the screens of their devices.
-                </h3>
-                <img id="shop" src="../assets/side-shop.png" />
+                                <button id="shop-refresh-btn" class="dialogue-btn shop-refresh-btn">Refresh</button>
+                <div class="shop-main-flex">
+                    <div class="shop-items-column">
+                                                <div id="shop-coin-display" style="margin-bottom:18px;font-family:'Comic Sans MS',cursive,sans-serif;font-size:1.15em;color:#6c8a5e;font-weight:bold;display:flex;align-items:center;gap:8px;"></div>
+                        <div id="shop-items-scroll">
+                            <!-- Item boxes will be rendered here -->
+                        </div>
+                    </div>
+                    <div class="shop-image-column">
+                        <img id="shop" src="../assets/side-shop.png" />
+                        <!-- Shopkeeper Dialogue Container -->
+                        <div id="shopkeeper-dialogue-container">
+                            <img id="shopkeeper-img" src="../assets/shopkeeper.png" alt="Shopkeeper" />
+                            <div id="shopkeeper-dialogue">
+                                <span id="shopkeeper-dialogue-text">Welcome to the shop! What would you like to buy today?</span>
+                                <div id="shopkeeper-dialogue-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </body>
-        <footer>
-            &copy Ayuyao, Ong. All rights reserved.
-            <br />
-            <li><a href="public/about-us.html">About Us</a></li>
-            <li><a href="public/about-site.html">About Site</a></li>
-        </footer>
+            <footer>
+                &copy Ayuyao, Ong. All rights reserved.
+                <br />
+                <li><a href="public/about-us.html">About Us</a></li>
+                <li><a href="public/about-site.html">About Site</a></li>
+            </footer>
+            <script src="./js/shop.js"></script>
+        </body>
     </html>
 </html>
