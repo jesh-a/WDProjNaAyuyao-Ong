@@ -25,17 +25,17 @@
     <!-- login -->
     <div id="menu">
     <div class="wrapper">
-            <form action="./public/garden.html" method="GET">
+            <form id="loginForm" action="./public/garden.html" method="GET">
                 <h1> Login ᝰ.ᐟ </h1>
                 <div class="input-box">
                     <input type="text" id="username" placeholder="Username" name="username"
                     required>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password"
+                    <input type="password" id="password" placeholder="Password"
                     required>
                 </div>
-                <button type="submit" class="btn">Login</button></a>
+                <button type="submit" class="btn" onclick="openGarden()">Login</button></a>
             </div>
 
     <!-- Login photo with logo -->
@@ -71,6 +71,27 @@
                 <li><a href="public/about-us.html">About Us</a></li>
                 <li><a href="public/about-site.html">About Site</a></li>
             </footer>
+
+            <script>
+
+                document.getElementById("loginForm").addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                let userData = {
+                    username: document.getElementById("username").value,
+                    password: document.getElementById("password").value,
+                };
+
+                let savedData = JSON.parse(localStorage.getItem("userData")) || [];
+                savedData.push(userData);
+                localStorage.setItem("userData", JSON.stringify(savedData));
+
+            });
+
+            function openGarden() {
+                window.location.href = "./public/garden.html";
+            }
+            </script>
         </body>
     </html>
 </html>
